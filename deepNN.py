@@ -26,14 +26,14 @@ def deep_nn_model(X_train, y_train, X_val, y_val, params, verbose = 1):
     t_diff -- The time taken for the call to keras model.fit.
     """
     
-    #Set default values fo various parameters.
+    #Set default values for various parameters.
     if params.get('layers'):
         lds = params['layers']
     else:
         lds = [1000, 500, 500, 500]
         params['layers'] = lds
 
-    #Chose the optimizer
+    #Choose the optimizer
     optimizer = params.get('optimizer')
     if optimizer == 'adagrad':
         optimizer = Adagrad
