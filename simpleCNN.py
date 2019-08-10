@@ -34,7 +34,7 @@ def simple_cnn_model(X_train, y_train, X_val, y_val, params, verbose = 1):
     dropout_prob = 0 if (not params.get('dropout_prob')) else params['dropout_prob'] 
     callbacks = [] if (not params.get('callbacks')) else params['callbacks']
 
-    #Chose the optimizer
+    #Choose the optimizer
     optimizer = params.get('optimizer')
     if optimizer == 'adagrad':
         optimizer = Adagrad
