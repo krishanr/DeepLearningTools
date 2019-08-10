@@ -151,7 +151,6 @@ class MetaModel():
         """
         self.model_results = []
         self.recurse_params({}, params, hyper_params, model_generator, model_name, train_test, attributes)
-        #Return a list where each entry is of the form [out, model] from earlier calculations.
         return self.model_results
 
     def recurse_params(self, path, params, hyper_params,
